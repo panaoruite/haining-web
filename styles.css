@@ -1005,3 +1005,152 @@ body {
     line-height: 1.5;
     background: #f9f9f9;
 }
+
+/* 视频卡片样式：继承research-card，补充视频比例控制 */
+.video-card video {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16/9; /* 保持宽高比，适配不同设备 */
+    display: block;
+}
+/* 若需覆盖原有卡片间距，可调整：*/
+.video-card figcaption {
+    padding: 1rem;
+}
+
+/* 产品页整体风格延续 */
+.product-intro {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+    margin: 1.5rem 0;
+}
+
+/* 明信片网格布局：响应式+hover动效 */
+.postcard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.postcard-grid img {
+    width: 100%;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.postcard-grid img:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+/* 购买按钮（与主题色呼应） */
+.product-cta {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    background-color: #d4af37; /* 呼应皮影主色调 */
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #bfa030; /* 深色 hover 增强质感 */
+}
+
+/* 产品网格布局：双列响应式 */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* 产品卡片统一风格 */
+.product-card {
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
+    transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.product-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* 产品标题与描述 */
+.product-title {
+    font-size: 1.25rem;
+    color: #333;
+    margin: 1rem 0;
+}
+
+.product-desc {
+    font-size: 0.95rem;
+    color: #666;
+    line-height: 1.6;
+    margin-bottom: 1.2rem;
+}
+
+/* 产品图片网格：多图自适应 */
+.product-image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.product-image-grid img {
+    width: 100%;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.product-image-grid img:hover {
+    transform: scale(1.05); /* 图片悬停微放大，增强互动 */
+}
+
+/* 购买按钮（延续主题色） */
+.product-cta {
+    display: inline-block;
+    padding: 0.8rem 1.6rem;
+    background-color: #d4af37;
+    color: #fff;
+    border-radius: 4px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.product-cta:hover {
+    background-color: #bfa030;
+}
+
+/* 价格模块样式：与主题色呼应，强化视觉焦点 */
+.product-price {
+    font-size: 1rem;
+    color: #d4af37; /* 继承皮影戏主色调，突出价格 */
+    margin: 0.8rem 0; /* 与描述、图片保持呼吸感 */
+}
+
+.product-price span {
+    font-weight: 700; /* 价格数字加粗，增强辨识度 */
+    color: #bfa030; /* 深色强调，避免与背景冲突 */
+}
+
+/* 响应式适配：小屏幕下价格仍清晰 */
+@media (max-width: 768px) {
+    .product-price {
+        font-size: 0.95rem;
+    }
+}

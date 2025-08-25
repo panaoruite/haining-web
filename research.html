@@ -64,13 +64,21 @@
                     </ul>
                     <p>这些实践成果将帮助我们更好地保护和传承这一珍贵的非物质文化遗产。</p>
                 </div>
-                <div class="video-placeholder">
-                    <div class="video-container">
-                        <i class="fas fa-play-circle"></i>
-                        <p>纪录片正在制作中...</p>
-                        <p class="video-note">敬请期待我们的完整纪录片</p>
-                    </div>
-                </div>
+                <!-- 视频卡片：与原有research-card风格统一 -->
+                <figure class="research-card video-card">
+                    <video controls 
+                        poster="images/research/shadow-documentary-cover.jpg" 
+                        preload="metadata">
+                        <source src="videos/shadow-documentary.mp4" type="video/mp4">
+                        <!-- 兼容旧浏览器，可添加WebM格式 -->
+                        <source src="videos/shadow-documentary.webm" type="video/webm">
+                        您的浏览器不支持视频播放，请升级浏览器。
+                    </video>
+                    <figcaption>
+                        <h3>海宁皮影戏传承纪录片</h3>
+                        <p>记录非遗传承人访谈、工艺制作、舞台表演的珍贵影像，展现「推皮走刀」「南腔北影」的文化魅力。</p>
+                    </figcaption>
+                </figure>
             </div>
         </div>
     </section>
@@ -133,7 +141,6 @@
             </div>
         </div>
     </section>
-
 
     <!-- 页脚 -->
     <footer class="footer">
